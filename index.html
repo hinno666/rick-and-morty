@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Rick and Morty</title>
+</head>
+<body>
+      <header class="header">
+    <div class="header__logo">Rick and Morty Characters Search</div>
+    <nav class="header__menu">
+      <ul class="menu__list">
+        <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Characters</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main">
+    <section class="main__search">
+      <form class="search__form">
+        <input type="text" name="search" class="search__input" placeholder="Search characters...">
+        <button type="submit" class="search__button">Search</button>
+      </form>
+    </section>
+    <section class="main__results">
+      <h2 class="results__title">Search Results:</h2>
+        <ul class="results__list">
+            <li class="results__item">
+                <img class="results__image" src="img/Morty.jpeg" alt="Morty Smith">
+                <h3 class="results__title">Morty Smith</h3>
+                <p class="results__text">Status: Alive</p>
+                <p class="results__text">Species: Human</p>
+                <p class="results__text">Gender: Male</p>
+            </li>
+        </ul>
+    </section>
+  </main>
+  <footer class="footer">
+    <p class="footer__text">Copyright © Rick and Morty Search</p>
+  </footer>
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>

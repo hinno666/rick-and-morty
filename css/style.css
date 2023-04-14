@@ -1,0 +1,264 @@
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{
+	outline: none;
+}
+
+a:focus,a:active{
+	outline: none;
+}
+
+nav,footer,header,aside{
+	display: block;
+}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 136.7%;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input,button,textarea{
+	font-family:inherit;
+}
+
+input::-ms-clear{
+	display: none;
+}
+
+button{
+	cursor: pointer;
+    -webkit-user-select: none; 
+    -webkit-touch-callout: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;    
+}
+
+button::-moz-focus-inner {
+	padding:0;
+	border:0;
+}
+
+a, a:visited{
+	text-decoration: none;
+	color: inherit;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+ul li{
+	list-style: none;
+}
+
+img{
+	vertical-align: top;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-size:inherit;
+	font-weight: 400;}
+/*--------------------*/
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+ background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #ffffff;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Set minimum height to 100% of viewport height */
+}
+
+
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8daf6;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  padding: 1rem;
+  color: black;
+}
+
+.header__logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu__list {
+  display: flex;
+  list-style: none;
+  text-align: center;
+}
+
+.menu__item {
+  margin-left: 1rem;
+}
+
+.menu__link {
+  padding: .5rem;
+}
+
+.menu__link:hover {
+  background-color: #940101;
+  color: #fff;
+  border-radius: .25rem;
+}
+
+/* Main styles */
+.main {
+  padding: 2rem;
+  flex: 1; /* Set flex-grow to 1 to fill remaining vertical space */
+}
+
+.main__search {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.search__form {
+  display: flex;
+}
+
+.search__input {
+  width: 100%;
+  padding: .5rem;
+  border-radius: .25rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.search__button {
+  padding: .5rem 1rem;
+  border-radius: .25rem;
+  border: none;
+  background-color: #c20000;
+  color: #fff;
+  font-size: 1rem;
+  margin-left: .5rem;
+  cursor: pointer;
+}
+
+.search__button:hover {
+  background-color: #8d0000;
+}
+
+.results__title {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.results__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 3rem;
+  color: rgb(238, 197, 241);
+}
+
+.results__item {
+  display: flex;
+  flex-direction: column;
+    border: 2px black solid;
+    background: #2b012596;
+  backdrop-filter: blur(7px);
+  border-radius: .40rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  max-width: 30rem;
+  text-align: center;
+  padding: 15px;
+}
+
+.results__image {
+    margin-bottom: 15px;
+}
+.results__title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.results__text {
+    font-weight: 700;
+}
+
+.results__text:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+
+
+.footer {
+background-color: #333;
+color: #fff;
+padding: 1rem;
+margin-top: auto;
+}
+
+.footer__text {
+text-align: center;
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+.main {
+padding: 1rem;
+}
+
+.results__list {
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+grid-gap: 1rem;
+}
+}
+
+@media screen and (max-width: 576px) {
+.header {
+flex-direction: column;
+}
+
+.header__logo {
+margin-bottom: 1rem;
+}
+
+.header__menu {
+margin-top: 1rem;
+}
+
+.menu__list {
+flex-direction: column;
+}
+
+.menu__item {
+margin: .5rem 0;
+}
+}
